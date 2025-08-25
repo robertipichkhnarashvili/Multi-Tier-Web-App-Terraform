@@ -3,8 +3,11 @@ This project demonstrates a hands-on implementation of a multi-tier web applicat
 Networking
   
 1.VPC with public and private subnets
+
 2.Internet Gateway and NAT Gateway
+
 3.Custom route tables and associations
+
 
 Security 
 
