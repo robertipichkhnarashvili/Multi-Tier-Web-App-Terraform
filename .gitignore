@@ -1,0 +1,7 @@
+.terraform
+github.tf
+private_key.pem
+variable2.tf 
+token.txt
+terraform.tfstate
+terraform.tfstate.backup
