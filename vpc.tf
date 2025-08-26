@@ -32,7 +32,6 @@ resource "aws_subnet" "private_subnets" {
   tags = {
     Name = "Private Subnet ${count.index + 1}"
   }
-
 }
 
 # Creation of Internet gateway and IGW attachment to the VPC
@@ -51,4 +50,9 @@ resource "aws_eip" "NAT_EIP" {
 resource "aws_nat_gateway" "NAT_in_Public_Subnets" {
   allocation_id = aws_eip.NAT_EIP.id
   subnet_id     = aws_subnet.public_subnets[0].id
+}
+
+
+output "subnet_azs" {
+  value = aws_subnet.public_subnets[*].availability_zone_id
 }

@@ -57,3 +57,9 @@ output "db1_address" {
 output "db2_address" {
   value = aws_db_instance.rds_db_2.address
 }
+output "db1_subnet_name" {
+  value = aws_db_instance.rds_db_1.db_subnet_group_name.name
+}
+output "db2_subnet_name" {
+  value = aws_db_instance.rds_db_2.db_subnet_group_name.name
+}
