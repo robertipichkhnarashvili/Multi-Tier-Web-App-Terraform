@@ -28,6 +28,7 @@ resource "aws_subnet" "private_subnets" {
   cidr_block = var.private_subnets_ipv4_cidr[count.index]
   map_public_ip_on_launch = false 
   depends_on = [ aws_vpc.main_vpc ]
+  availability_zone = var.az_id[count.index]
   tags = {
     Name = "Private Subnet ${count.index + 1}"
   }

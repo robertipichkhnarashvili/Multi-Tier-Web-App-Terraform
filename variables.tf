@@ -44,3 +44,8 @@ variable "az_id" {
   type = list(string)
   default = ["eu-central-1a","eu-central-1b"]
 }
+
+# DB Engine version
+variable "db_engine_version" {
+  default = "8.0"
+}
