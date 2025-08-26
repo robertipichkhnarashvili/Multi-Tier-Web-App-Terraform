@@ -5,14 +5,14 @@ variable "vpc_ipv4_cidr" {
 
 # Public Subnet CIDR 
 variable "public_subnets_ipv4_cidr" {
-  type = list(string)
-  default = ["10.0.0.0/19","10.0.32.0/19"]
+  type    = list(string)
+  default = ["10.0.0.0/19", "10.0.32.0/19"]
 }
 
 # Private Subnet CIDR 
 variable "private_subnets_ipv4_cidr" {
-  type = list(string)
-  default = ["10.0.128.0/18","10.0.192.0/18"]
+  type    = list(string)
+  default = ["10.0.128.0/18", "10.0.192.0/18"]
 }
 
 # All IPV4
@@ -23,9 +23,9 @@ variable "all_ipv4" {
 # SG Ports
 variable "SG_Ports" {
   type = map(string)
-  default = { 
+  default = {
     1 = "443",
-    2 = "80" 
+    2 = "80"
   }
 }
 
@@ -41,8 +41,8 @@ variable "private_key_path" {
 
 # Creating AZ ID's
 variable "az_id" {
-  type = list(string)
-  default = ["eu-central-1a","eu-central-1b"]
+  type    = list(string)
+  default = ["eu-central-1a", "eu-central-1b"]
 }
 
 # DB Engine version
