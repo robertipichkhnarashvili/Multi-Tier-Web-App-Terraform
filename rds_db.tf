@@ -1,3 +1,4 @@
+#Creating database instance N1
 resource "aws_db_instance" "rds_db_1" {
   allocated_storage = 24
   db_name = "database1"
@@ -16,6 +17,7 @@ resource "aws_db_instance" "rds_db_1" {
   backup_window = "03:00-04:00"
   final_snapshot_identifier = "my-final-snapshot-1"
 }
+#Creating database instance N2
 resource "aws_db_instance" "rds_db_2" {
   allocated_storage = 24
   db_name = "database2"
@@ -34,10 +36,12 @@ resource "aws_db_instance" "rds_db_2" {
   backup_window = "03:00-04:00"
   final_snapshot_identifier = "my-final-snapshot-2"
 }
+#Creating database subnet group
 resource "aws_db_subnet_group" "subnet_group" {
   name = "db_subnet_groups_1"
   subnet_ids = ["${aws_subnet.private_subnets[0].id}","${aws_subnet.private_subnets[1].id}"]
 }
+#Creating database parameter group
 resource "aws_db_parameter_group" "p_group" {
   name = "rds-pg"
   family = "mysql8.0"
