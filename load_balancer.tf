@@ -26,8 +26,8 @@ resource "aws_lb_target_group" "lb_target_group" {
   }
 }
 
-# Creating LB listener
-resource "aws_lb_listener" "name" {
+# Creating LB listener for HTTP
+resource "aws_lb_listener" "HTTP" {
   load_balancer_arn = aws_lb.loadbalancer.arn
   port              = 80
   protocol          = "HTTP"
