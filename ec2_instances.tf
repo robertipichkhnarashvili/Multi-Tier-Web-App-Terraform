@@ -1,3 +1,4 @@
+#Creating 2 EC2 instances in both public subnets
 resource "aws_instance" "web" {
   ami = data.aws_ami.EC2_Latest_AMI.id
   instance_type = var.instance_type
