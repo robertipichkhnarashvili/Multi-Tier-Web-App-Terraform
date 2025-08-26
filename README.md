@@ -32,10 +32,3 @@ Database
 1.RDS instance in private subnet with restricted access
 
 2.Backup enabled
-
-
-IaC  
-
-1.Fully managed by Terraform
-
-2.Reusable code
