@@ -5,3 +5,4 @@ variable2.tf
 token.txt
 terraform.tfstate
 terraform.tfstate.backup
+terraform (1).json

@@ -23,3 +23,7 @@ resource "aws_instance" "web" {
   }
   subnet_id = aws_subnet.public_subnets[count.index].id
 }
+
+output "ec2_public_ips" {
+  value = aws_instance.web[*].public_ip
+}

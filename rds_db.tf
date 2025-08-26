@@ -50,3 +50,10 @@ resource "aws_db_parameter_group" "p_group" {
     value = 40
   }
 }
+
+output "db1_address" {
+  value = aws_db_instance.rds_db_1.address
+}
+output "db2_address" {
+  value = aws_db_instance.rds_db_2.address
+}

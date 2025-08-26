@@ -44,3 +44,7 @@ resource "aws_lb_target_group_attachment" "web_tg" {
   target_group_arn = aws_lb_target_group.lb_target_group.arn
   port = 80
 }
+
+output "dns_name_lb" {
+  value = aws_lb.loadbalancer.dns_name
+}
